@@ -19,6 +19,7 @@ body {
   font-family: "Inter", serif;
   display: flex;
   justify-content: center;
+  background-color: var(--Off-white);
 }
 
 .container {
@@ -156,17 +157,22 @@ body {
   font-size: 32px;
   font-weight: 800;
   color: var(--Soft-red);
+  cursor: pointer;
 }
 
 .div__card .card-title {
   font-size: 18px;
   font-weight: 700;
+  cursor: pointer;
 }
-
+.div__card .card-title:hover {
+  color: var(--Soft-red);
+}
 .div__card .card-description {
   font-size: 15px;
   font-weight: 400;
   padding-bottom: 8px;
+  color: var(--Dark-grayish-blue);
 }
 
 .menu__back {
@@ -220,6 +226,7 @@ body {
 
 .menubar ul>li {
   cursor: pointer;
+  color: var(--Dark-grayish-blue);
 }
 
 .menubar ul>li:hover {
@@ -227,6 +234,10 @@ body {
 }
 
 @media (width >=1024px) {
+  .header .div_logo img {
+    width: 66px;
+    height: 41px;
+  }
 
   .menu__back {
     width: 100%;
@@ -274,6 +285,7 @@ body {
     white-space: pre;
     /* Activa el salto de línea */
     display: block;
+    letter-spacing: 2%;
   }
 
   .main {
@@ -302,6 +314,7 @@ body {
 
   .content__description {
     max-width: 350px;
+    padding-top: 0;
   }
 
   .section__new {
@@ -309,9 +322,12 @@ body {
     margin-top: 0;
     grid-column: 3/4;
     margin-left: 30px;
-
+    padding: 21px 20px 0 20px;
+  
   }
-
+  .section__new .title {
+    font-size: 40px;
+  }
   .section__cards {
     width: 100%;
     justify-content: space-between;
@@ -334,4 +350,5 @@ body {
   .container {
     padding: 88px 0 0 0;
   }
+  
 }
