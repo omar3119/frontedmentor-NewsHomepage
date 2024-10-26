@@ -1,0 +1,337 @@
+:root {
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Inter", serif;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  max-width: 1109px;
+  padding: 28px 16px;
+}
+
+.header {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .div_logo img {
+  height: 29px;
+}
+
+.img-web-desktop {
+  display: none;
+}
+
+.section__1 {
+  margin-top: 31px;
+  width: 100%;
+}
+
+.main .section__1 figure img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.section__1 .content {
+  margin-top: 30px;
+}
+
+.content__title {
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.content__title::after {
+  content: "The Bright \A Future of Web \A 3.0?";
+  color: rgb(2, 2, 2);
+  white-space: pre;
+  /* Activa el salto de línea */
+  display: block;
+}
+
+.content__description {
+  font-size: 16px;
+  font-size: 400;
+  line-height: 26px;
+  color: var(--Dark-grayish-blue);
+  padding: 28px 0 32px 0;
+}
+
+.section__1 .content__btn {
+  height: 48px;
+  width: 185px;
+  background-color: var(--Soft-red);
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.section__1 .content__btn:hover {
+  background-color: var(--Very-dark-blue);
+  color: white;
+}
+
+.section__new {
+  background-color: var(--Very-dark-blue);
+  padding: 21px 20px;
+  margin-top: 64px;
+  color: white;
+}
+
+.section__new .title {
+  color: var(--Soft-orange);
+  font-size: 32px;
+}
+
+.section__new article {
+  padding-top: 32px;
+}
+
+.section__new .new__card:nth-child(2),
+.new__card:nth-child(3) {
+  border-bottom: 2px solid var(--Dark-grayish-blue);
+}
+
+.section__new article h3 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.section__new article p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--Grayish-blue);
+  line-height: 170%;
+  padding: 8px 0 29px 0;
+}
+
+.section__cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+  margin-top: 64px;
+  padding-bottom: 80px;
+}
+
+.section__cards .card {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.section__cards .card img {
+  width: 100px;
+}
+
+.div__card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.div__card .card-number {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--Soft-red);
+}
+
+.div__card .card-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.div__card .card-description {
+  font-size: 15px;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+
+.menu__back {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.menu__show {
+  display: none;
+}
+
+.background__menu {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.62);
+}
+
+.background__show {
+  display: none;
+}
+
+.menubar {
+  width: 256px;
+  height: 100vh;
+  padding: 27px 28px 0 24px;
+  background-color: white;
+  position: absolute;
+  right: 0;
+}
+
+.menubar .icon__close {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+.icon_menu, .menu__icon-close{
+  cursor: pointer;
+}
+.menubar ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-top: 94px;
+  list-style: none;
+}
+
+.menubar ul>li {
+  cursor: pointer;
+}
+
+.menubar ul>li:hover {
+  color: var(--Soft-red);
+}
+
+@media (width >=1024px) {
+
+  .menu__back {
+    width: 100%;
+    height: 100%;
+    position: static;
+  }
+
+  .background__menu {
+    display: none;
+  }
+
+  .menubar {
+    width: auto;
+    height: 100%;
+    position: static;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+
+  .menu__show {
+    display: block;
+  }
+
+  .menubar ul {
+    width: auto;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .icon_menu,
+  .img-web-mobile,
+  .menubar .icon__close {
+    display: none;
+  }
+
+  .img-web-desktop {
+    display: block;
+  }
+
+  .content__title::after {
+    content: "The Bright \A Future of \A Web 3.0?";
+    color: rgb(2, 2, 2);
+    white-space: pre;
+    /* Activa el salto de línea */
+    display: block;
+  }
+
+  .main {
+    margin-top: 55px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+  }
+
+  .section__1 {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .section__1 .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content__title {
+    max-width: 380px;
+    font-size: 54px;
+  }
+
+  .content__description {
+    max-width: 350px;
+  }
+
+  .section__new {
+    max-width: 350px;
+    margin-top: 0;
+    grid-column: 3/4;
+    margin-left: 30px;
+
+  }
+
+  .section__cards {
+    width: 100%;
+    justify-content: space-between;
+    grid-row: 2/4;
+    grid-column: 1/4;
+    gap: 5px;
+  }
+
+  .section__cards .card {
+    max-width: 330px;
+  }
+
+  .card-title .web3 {
+    display: inline;
+    white-space: none;
+  }
+}
+
+@media (width >=1440px) {
+  .container {
+    padding: 88px 0 0 0;
+  }
+}
